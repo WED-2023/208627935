@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: tan;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+.jorden_page{
+    width: 1600px;
+}
+
+.about_me_text,
+.about_me_image {
+    display: inline-block;
+    vertical-align: top; /* Aligns both divs at the top */
+}
+
+.about_me_text {
+    width: 50%; /* Adjust the width as needed */
+    padding-right: 20px; /* Add some space between the text and image */
+    color: wheat;
+}
+
+.about_me_image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.titles{
+    background-color: #ec0b0b;
+    font-size: 30px;
+    text-align: center;
+}
+.seperator{
+    padding-top: 20px;
+}
+.about_me_div{
+    width: 100%;
+    margin-left: 140px; 
+}
+.photos_div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-gap: 10px;
+    padding: 70px;
+
+}
+
+.photo-gallery div {
+    max-width: 100%; /* Ensure images don't exceed their container width */
+    height: auto; /* Maintain aspect ratio */
+}
+.michael_song{
+    margin-left: 500px;
+}
+#likeButton {
+    background-color: #4267B2; /* Facebook's primary color */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#likeCount {
+    margin-left: 10px;
+    font-weight: bold;
+}
+.like_button p{
+    color: tan;
+}

@@ -15,16 +15,16 @@
                 <li><a href="#photos">MY PHOTOS</a></li>
                 <li><a href="#like">LIKE</a></li>
                 <li><a href="#playlist">My Playlist</a></li>
-                <li><a href="#qr">QR code</a></li>
-                <li><a href="#qa">QA</a></li>
+                <li><a href="#QR">QR code</a></li>
+                <li><a href="#QA">QA</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
     </header>
-    <form class="jorden_page">
+    <div class="jorden_page">
         <div class="seperator"></div>
         <div class="about_michael">
-            <h1 class="about_me_title titles">ABOUT ME</h1>
+            <h1 id="about"class="about_me_title titles">ABOUT ME</h1>
             <div class="about_me_div">
                 <div class="about_me_text">
                     <h2 class="michael_jorden_title">
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="michael_photos">
-                <h1 class="photos_title titles">MY PHOTOS</h1>
+                <h1 id="photos" class="photos_title titles">MY PHOTOS</h1>
                 <div class="photos_div">
                     <div class="photo_container">
                         <img class="thumbnail" width="300", height="300" src="../images/jorden_dunk_tonge_out.jpg">
@@ -73,17 +73,17 @@
                 </div>
             </div>
             <div class="michael_my_playlist">
-                <h1 class="my_playlist titles">MY PLAYLIST</h1>
+                <h1 id="playlist" class="my_playlist titles">MY PLAYLIST</h1>
                 <div class="michael_song">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/W9JsQMypFfU?si=i-VPnQS6Smr_l-O4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="like_site_and_facebook">
-                <h1 class="likes titles">LIKE</h1>
+                <h1 id="like" class="likes titles">LIKE</h1>
                 <div class="like_button">
                     <p>If you like out content please click the like buttom.</p>
                     <button id="likeButton" type="button" onclick="click_like_button()">Like</button>
-                    <p>Total likes: <span id="likeCount">5773</span></p>
+                    <p class="likes_count">Total likes: <span id="likeCount">5773</span></p>
                 </div>
             
                 <div class="facebook_page_link">
@@ -91,6 +91,63 @@
                 </div>
             </div>
             <div class="QR_code">
-                <h1 class="likes titles">LIKE</h1>
-    </form>
+                <h1 id="QR" class="QR_code_title titles">QR CODE</h1>
+                <div>
+                    <img src="../images/Jorden_site.png" class="QR_code_image" width="150" height="150" alt="QR code for my site">
+                </div>
+            </div>
+            <div class="contact_me">
+                <h1 id="contact" class="likes titles">CONTACT</h1>
+            
+                <div id="my_envelope" class="letter-image">
+                    <div class="animated-mail">
+                        <div class="back-fold"></div>
+                        <div class="letter">
+                            <div class="letter-border"></div>
+                            <div class="letter-title"></div>
+                            <div class="letter-context"></div>
+                            <div class="letter-stamp">
+                                <div class="letter-stamp-inner"></div>
+                            </div>
+                        </div>
+                        <div class="top-fold"></div>
+                        <div class="body"></div>
+                        <div class="left-fold"></div>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+            </div>
+            <form id="contactForm" style="display: none;">
+                <div class="form_header">
+                    <h1 class="form_title">Contact us</h1>
+                </div>
+                <div class="form_line">
+                    <div class="form_label">
+                        <label for="name">Name:</label>
+                    </div>
+                    <div class="form_input">
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                </div>
+                <div class="form_line">
+                    <div class="form_label">
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="form_input">
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form_line">
+                    <div class="form_label">
+                        <label for="message">Message:</label>
+                    </div>
+                    <div class="form_input">
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                </div>
+                <div class="form_line">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
 </body>

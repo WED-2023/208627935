@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -77,27 +80,74 @@ nav ul li a:hover {
 }
 .photos_div {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-columns: repeat(4, 1fr); 
     grid-gap: 10px;
     padding: 70px;
+    transition: transform 0.3s ease;
 
 }
 
-.photo-gallery div {
-    max-width: 100%; /* Ensure images don't exceed their container width */
-    height: auto; /* Maintain aspect ratio */
+/* .photo-gallery div {
+    max-width: 100%; 
+    height: auto; 
+
+}
+.photo-gallery:hover div{
+    transform: scale(1.05);
+} */
+.photo_container{
+    position: relative; /* Ensure proper stacking context for child elements */
+    overflow: hidden; /* Ensure child elements don't overflow grid items */
+}
+
+/* Style the images inside grid items */
+.photo_container img {
+
+    display: block;
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+/* Apply hover effect to the grid items */
+.photo_container:hover {
+    transform: scale(1.4); 
+    z-index: 2; 
+
 }
 .michael_song{
     margin-left: 500px;
 }
-#likeButton {
-    background-color: #4267B2; /* Facebook's primary color */
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-}
 
+#likeButton {
+    /* animation properties */
+    animation-name: my-animation;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    /* other properties */
+    background-color: #33475b;
+    width: 40px;
+    height: 30px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto;
+    margin-right: auto; 
+  
+  }
+  
+@keyframes my-animation {
+    from {
+        background-color: #244f79;
+        width: 40px;
+        top: 10px;
+    }
+    to {
+        background-color: #ac0831;
+        width: 60px;
+        top: 10px;
+    }
+}
 #likeCount {
     margin-left: 10px;
     font-weight: bold;
@@ -105,3 +155,193 @@ nav ul li a:hover {
 .like_button p{
     color: tan;
 }
+body {
+	background: #323641;
+}
+
+.letter-image {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+.animated-mail {
+	position: absolute;
+	height: 150px;
+	width: 200px;
+	-webkit-transition: .4s;
+	-moz-transition: .4s;
+	transition: .4s;
+	
+	.body {
+		position: absolute;
+		bottom: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 100px 200px;
+		border-color: transparent transparent #e95f55 transparent;
+		z-index: 2;
+	}
+	
+	.top-fold {
+		position: absolute;
+		top: 50px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 50px 100px 0 100px;
+		-webkit-transform-origin: 50% 0%;
+		-webkit-transition: transform .4s .4s, z-index .2s .4s;
+		-moz-transform-origin: 50% 0%;
+		-moz-transition: transform .4s .4s, z-index .2s .4s;
+		transform-origin: 50% 0%;
+		transition: transform .4s .4s, z-index .2s .4s;
+		border-color: #cf4a43 transparent transparent transparent;
+		z-index: 2;
+	}
+	
+	.back-fold {
+		position: absolute;
+		bottom: 0;
+		width: 200px;
+		height: 100px;
+		background: #cf4a43;
+		z-index: 0;
+	}
+	
+	.left-fold {
+		position: absolute;
+		bottom: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 50px 0 50px 100px;
+		border-color: transparent transparent transparent #e15349;
+		z-index: 2;
+	}
+	
+	.letter {
+		left: 20px;
+		bottom: 0px;
+		position: absolute;
+		width: 160px;
+		height: 60px;
+		background: white;
+		z-index: 1;
+		overflow: hidden;
+		-webkit-transition: .4s .2s;
+		-moz-transition: .4s .2s;
+		transition: .4s .2s;
+		
+		.letter-border {
+			height: 10px;
+			width: 100%;
+      background: repeating-linear-gradient(
+        -45deg,
+        #cb5a5e,
+        #cb5a5e 8px,
+        transparent 8px,
+        transparent 18px
+      );
+		}
+		
+		.letter-title {
+			margin-top: 10px;
+			margin-left: 5px;
+			height: 10px;
+			width: 40%;
+			background: #cb5a5e;
+		}
+		.letter-context {
+			margin-top: 10px;
+			margin-left: 5px;
+			height: 10px;
+			width: 20%;
+			background: #cb5a5e;
+		}
+		
+		.letter-stamp {
+			margin-top: 30px;
+			margin-left: 120px;
+			border-radius: 100%;
+			height: 30px;
+			width: 30px;
+			background: #cb5a5e;
+			opacity: 0.3;
+		}
+	}
+}
+.letter-image{
+    position:relative;
+    margin-top: 100px;
+}
+.shadow {
+
+	top: 2000px;
+	left: 50%;
+	width: 400px;
+	height: 30px;
+	transition: .4s;
+	transform: translateX(-50%);
+	-webkit-transition: .4s;
+	-webkit-transform: translateX(-50%);
+	-moz-transition: .4s;
+	-moz-transform: translateX(-50%);
+	
+	border-radius: 100%;
+	background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0), rgba(0,0,0,0.0));
+}
+
+.letter-image:hover {
+    .animated-mail {
+        transform: translateY(100px);
+        -webkit-transform: translateY(50px);
+        -moz-transform: translateY(50px);
+    }
+		
+    .animated-mail .top-fold {
+        transition: transform .4s, z-index .2s;
+        transform: rotateX(180deg);
+        -webkit-transition: transform .4s, z-index .2s;
+        -webkit-transform: rotateX(180deg);
+        -moz-transition: transform .4s, z-index .2s;
+        -moz-transform: rotateX(180deg);
+        z-index: 0;
+    }
+    
+    .animated-mail .letter {
+        height: 180px;
+    }
+    
+    .shadow {
+        width: 250px;
+    }
+} 
+#contactForm{
+    background-color: white;
+    height: 500px;
+    width: 600px;
+    z-index: 1px;
+    position: relative;
+}
+.form_label{
+    float: left;
+    width: 20%;
+}
+.form_input{
+    float: left;
+    width: 80%;
+}
+
+.form_line::after{
+    content: '.';
+    visibility: hidden;
+}
+  

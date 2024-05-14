@@ -45,6 +45,14 @@ nav ul li a:hover {
     color: #ffd700;
 }
 
+.message {
+    display: none; /* Initially hide the message */
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
 .jorden_page{
     width: 1600px;
 }
@@ -52,12 +60,12 @@ nav ul li a:hover {
 .about_me_text,
 .about_me_image {
     display: inline-block;
-    vertical-align: top; /* Aligns both divs at the top */
+    vertical-align: top;
 }
 
 .about_me_text {
-    width: 50%; /* Adjust the width as needed */
-    padding-right: 20px; /* Add some space between the text and image */
+    width: 50%;
+    padding-right: 20px; 
     color: wheat;
 }
 
@@ -70,6 +78,7 @@ nav ul li a:hover {
     background-color: #ec0b0b;
     font-size: 30px;
     text-align: center;
+    margin-right: 70px;
 }
 .seperator{
     padding-top: 20px;
@@ -87,17 +96,9 @@ nav ul li a:hover {
 
 }
 
-/* .photo-gallery div {
-    max-width: 100%; 
-    height: auto; 
-
-}
-.photo-gallery:hover div{
-    transform: scale(1.05);
-} */
 .photo_container{
-    position: relative; /* Ensure proper stacking context for child elements */
-    overflow: hidden; /* Ensure child elements don't overflow grid items */
+    position: relative;
+    overflow: hidden; 
 }
 
 /* Style the images inside grid items */
@@ -114,7 +115,8 @@ nav ul li a:hover {
 
 }
 .michael_song{
-    margin-left: 500px;
+    margin-left: 30%;
+    border: 2px solid #d51414;
 }
 
 #likeButton {
@@ -155,9 +157,7 @@ nav ul li a:hover {
 .like_button p{
     color: tan;
 }
-body {
-	background: #323641;
-}
+
 
 .letter-image {
 	position: absolute;
@@ -281,6 +281,8 @@ body {
 .letter-image{
     position:relative;
     margin-top: 100px;
+    left: 48%;
+
 }
 .shadow {
 
@@ -326,10 +328,15 @@ body {
 } 
 #contactForm{
     background-color: white;
-    height: 500px;
+    height: 400px;
     width: 600px;
     z-index: 1px;
-    position: relative;
+    position:relative;
+    margin: 0 auto; 
+    top: -100px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 .form_label{
     float: left;
@@ -340,8 +347,71 @@ body {
     width: 80%;
 }
 
+.form_header {
+    text-align: center;
+}
+
+.form_title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form_line {
+    margin-bottom: 15px;
+}
 .form_line::after{
     content: '.';
     visibility: hidden;
+}
+
+.form_label {
+    float: left;
+    width: 100px;
+}
+
+.form_input {
+    overflow: hidden;
+}
+
+#message{
+    height: 100px;
+    max-width: 400px;
+    max-height: 150px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 220px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="button"] {
+    width: 30%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+.emojiSelector {
+    width: 100px;
+    padding: 3px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    background-color: #fff; 
+    color: #333;
+}
+.QR_code_image{
+
+    margin-left: 43%;
 }
   

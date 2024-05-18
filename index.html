@@ -125,7 +125,7 @@
             </div>
         </div>
         
-        <form id="contactForm" style="display: none;">
+        <form action="mailto:kobizagurikobi@gmail.com" method="post" enctype="text/plain" id="contactForm" style="display: none;">
             <div class="contact_form_div">
                 <div class="form_header">
                     <h1 class="form_title">Contact us</h1>
@@ -135,7 +135,7 @@
                         <label for="name">Name:</label>
                     </div>
                     <div class="form_input">
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name_form_1" name="name" required>
                     </div>
                 </div>
                 <div class="form_line">
@@ -143,7 +143,7 @@
                         <label for="email">Email:</label>
                     </div>
                     <div class="form_input">
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email_form_1" name="email" required>
                     </div>
                 </div>
                 <div class="form_line">
@@ -151,7 +151,7 @@
                         <label for="message">Message:</label>
                     </div>
                     <div class="form_input">
-                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <textarea id="message_form_1" name="message" rows="4" required></textarea>
                         <div class="form_line">
                             <select id="emojiSelect" class="emojiSelector">
                                 <option value="">Select Emoji</option>
@@ -262,7 +262,7 @@
                     </div>
                 </div>
                 <div class="form_line">
-                    <button type="button" onclick="send_contact_form()">Send Message</button>
+                    <input type="submit" value="Send">
                 </div>
             </div>
         </form>

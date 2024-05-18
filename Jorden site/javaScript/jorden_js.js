@@ -5,11 +5,13 @@ let variableDisplay = document.getElementById('variableDisplay');
 var my_envelope_div = document.getElementById('my_envelope');
 
 //emoji picker
+
 document.getElementById('emojiSelect').addEventListener('change', function() {
   var emoji = this.value;
-  var messageTextarea = document.getElementById('message');
+  var messageTextarea = document.getElementById('message_form_1');
   messageTextarea.value += emoji;
 });
+
 
 //open and close the contact us form
 my_envelope_div.addEventListener('click', function() {
@@ -34,15 +36,4 @@ function click_like_button(){
     }
     document.getElementById('likeCount').innerHTML = site_likes;
 }
-function send_contact_form(){
-  currentHtml = document.getElementById('contactForm').innerHTML
-  document.getElementById('contactForm').innerHTML = "Thank you for your message, we will answer you soon."
-  setTimeout(function() {
-      document.getElementById('contactForm').style.display = 'none';
-      document.getElementById('contactForm').innerHTML = currentHtml
-  }, 2000); 
-  
-}
-
-
 

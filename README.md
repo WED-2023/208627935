@@ -1,5 +1,9 @@
 # Michael Jordan Tribute Website
 
+## Project Link And Contact Info
+name: Yaakov zaguri, ID: 208627935
+[https://wed-2023.github.io/208627935/]
+
 ## Overview
 The Michael Jordan Tribute Website is a digital homage to one of the greatest basketball players of all time, Michael Jordan. It serves as a platform to honor and commemorate his achievements, both on and off the basketball court.
 
@@ -17,7 +21,3 @@ The website caters to fans of Michael Jordan, basketball enthusiasts, sports his
 
 ## Significance
 As a tribute to Michael Jordan, the website serves as a digital memorial, ensuring that his remarkable legacy continues to be remembered and appreciated by current and future generations. It celebrates his unparalleled talent, relentless work ethic, and profound impact on the world of sports and popular culture.
-
-
-## Project Link
-[https://wed-2023.github.io/208627935/]

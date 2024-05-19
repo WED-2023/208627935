@@ -6,9 +6,9 @@ var my_envelope_div = document.getElementById('my_envelope');
 
 //emoji picker
 
-document.getElementById('emojiSelect').addEventListener('change', function() {
+document.getElementById('emoji').addEventListener('change', function() {
   var emoji = this.value;
-  var messageTextarea = document.getElementById('message_form_1');
+  var messageTextarea = document.getElementById('message');
   messageTextarea.value += emoji;
 });
 
@@ -17,12 +17,13 @@ document.getElementById('emojiSelect').addEventListener('change', function() {
 my_envelope_div.addEventListener('click', function() {
   form_open = !form_open
   if (form_open){
-    document.getElementById('contactForm').style.display = 'block';
-    document.getElementById('message_form_1').value = " "
-    document.getElementById('email_form_1').value = " "
-    document.getElementById('name_form_1').value = " "
+    document.getElementById('emailForm').style.display = 'block';
+    document.getElementById('message').value = " "
+    document.getElementById('email').value = " "
+    document.getElementById('name').value = " "
+    document.getElementById('emoji').value = "Select Emoji"
   }else{
-    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('emailForm').style.display = 'none';
   }
 });
 
@@ -38,3 +39,16 @@ function click_like_button(){
     }
     document.getElementById('likeCount').innerHTML = site_likes;
 }
+
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting the traditional way
+  
+  const name = document.getElementById('name').value + "\nemail: " + document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  const email = 'kobizagurikobi@gmail.com';
+
+  const mailtoLink = `mailto:${email}?subject=Message from ${name}&body=${encodeURIComponent(message)}`;
+  
+  window.location.href = mailtoLink;
+});

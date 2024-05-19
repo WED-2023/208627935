@@ -326,52 +326,7 @@ nav ul li a:hover {
         width: 250px;
     }
 } 
-#contactForm{
-    background-color: white;
-    height: 400px;
-    width: 600px;
-    z-index: 1px;
-    position:relative;
-    margin: 0 auto; 
-    top: -100px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.form_label{
-    float: left;
-    width: 20%;
-}
-.form_input{
-    float: left;
-    width: 80%;
-}
 
-.form_header {
-    text-align: center;
-}
-
-.form_title {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.form_line {
-    margin-bottom: 15px;
-}
-.form_line::after{
-    content: '.';
-    visibility: hidden;
-}
-
-.form_label {
-    float: left;
-    width: 100px;
-}
-
-.form_input {
-    overflow: hidden;
-}
 
 #message{
     height: 100px;
@@ -419,4 +374,59 @@ button[type="button"]:hover {
     color: tan;
     margin-left: 15%;
 }
+#emailForm{
+    color: black;
+    background-color: #ffffff;
+    max-width: 400px;
+    margin-left: 35rem;
+    margin-top: 0rem;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    position: relative;
+}
+.form-container {
+    color: black;
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+.form_header {
+    text-align: center;
+    color: black;
+    margin-bottom: 1em;
+}
+label {
+    
+    margin-bottom: 0.5em;
+    color: black;
+    display: block;
+}
+.text_area{
+    margin-bottom: 0.5em;
+    color: black;
+    border: 1px solid #cccccc;
+    padding: .5em;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.3em;
+}
+#submit_button {
+    margin-top: 2em ;
+    padding: 0.7em;
+    color: black;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+    font-size: 1em;
+}
+#submit_button:hover {
+    background-color: #0056b3;
+}
+
   

@@ -10,6 +10,7 @@ document.getElementById('emojiSelect').addEventListener('change', function() {
   var emoji = this.value;
   var messageTextarea = document.getElementById('message_form_1');
   messageTextarea.value += emoji;
+  console.log(messageTextarea.value)
 });
 
 
@@ -18,12 +19,14 @@ my_envelope_div.addEventListener('click', function() {
   form_open = !form_open
   if (form_open){
     document.getElementById('contactForm').style.display = 'block';
+    document.getElementById('message_form_1').value = " "
+    document.getElementById('email_form_1').value = " "
+    document.getElementById('name_form_1').value = " "
   }else{
     document.getElementById('contactForm').style.display = 'none';
   }
 });
 
-variableDisplay.innerHTML = myVariable;
 // like and unlike the page
 function click_like_button(){
     liked = !liked;
@@ -36,4 +39,3 @@ function click_like_button(){
     }
     document.getElementById('likeCount').innerHTML = site_likes;
 }
-

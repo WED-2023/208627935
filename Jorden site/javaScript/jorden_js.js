@@ -43,7 +43,7 @@ function click_like_button(){
 document.getElementById('emailForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent the form from submitting the traditional way
   
-  const name = document.getElementById('name').value + "\n email: " + document.getElementById('email').value;
+  const name = document.getElementById('name').value + " email: " + document.getElementById('email').value + " ";
   const message = document.getElementById('message').value;
 
   const email = 'kobizagurikobi@gmail.com';

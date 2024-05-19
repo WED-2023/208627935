@@ -1,4 +1,4 @@
-site_likes = 5773
+site_likes = 245748
 liked = false
 form_open = false
 let variableDisplay = document.getElementById('variableDisplay');
@@ -10,7 +10,6 @@ document.getElementById('emojiSelect').addEventListener('change', function() {
   var emoji = this.value;
   var messageTextarea = document.getElementById('message_form_1');
   messageTextarea.value += emoji;
-  console.log(messageTextarea.value)
 });
 
 
